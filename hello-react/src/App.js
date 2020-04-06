@@ -1,25 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import MyComponent from './MyComponent';
+// import Counter from './CounterClass';
+// import Counter from './Counter';
+import Say from './Say';
 
-function App() {
-  const name = '리액트';
-  const style = {
-    backgroundColor: 'black',
-    color: 'aqua',
-    fontSize: '48px',
-    fontWeight: 'bold',
-    padding: 16
-  };
-
+const App = () => {
   return (
     <>
-      <div className="react">
-        {name}
-      </div>
-      <input />
+      {/* <MyComponent name='React' favoriteNumber={1}>
+        수액트
+      </MyComponent> */}
+      {/* <Counter /> */}
+      <Say />
     </>
   );
-}
+};
 
 export default App;
