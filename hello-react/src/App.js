@@ -1,21 +1,23 @@
-import React from 'react';
-import MyComponent from './MyComponent';
-// import Counter from './CounterClass';
-// import Counter from './Counter';
-// import Say from './Say';
-import EventPractice from './EventPractice';
+import React, { Component } from 'react';
+import ValidationSample from './ValidationSample';
+import ScrollBox from './ScrollBox';
 
-const App = () => {
-  return (
-    <>
-      {/* <MyComponent name='React' favoriteNumber={1}>
-        수액트
-      </MyComponent> */}
-      {/* <Counter /> */}
-      {/* <Say /> */}
-      <EventPractice />
-    </>
-  );
+class App extends Component {
+  handleClick = () => {
+    this.ScrollBox.scrollToBottom();
+  };
+
+  render() {
+    return (
+      <div>
+        {/* <ValidationSample /> */}
+        <ScrollBox ref={(ref) => {this.ScrollBox=ref;}}/>
+        <button onClick={this.handleClick}>
+          맨 밑으로
+        </button>
+      </div>
+    );
+  }
 };
 
 export default App;
