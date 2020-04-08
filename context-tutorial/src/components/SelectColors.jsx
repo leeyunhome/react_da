@@ -31,7 +31,6 @@ class SelectColors extends Component {
                     onClick={() => this.handleSetColor(color)}
                     onContextMenu={e => {
                         e.preventDefault();
-                        this.handleSetSubcolor(color);
                     }}
                   />
                 ))}
